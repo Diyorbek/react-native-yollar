@@ -1,0 +1,50 @@
+{
+  "main": "index.js",
+  "private": true,
+  "author": "Diyorbek Sadullaev",
+  "license": "MIT",
+  "workspaces": [
+    "lib"
+  ],
+  "scripts": {
+    "release": "cd lib && yarn publish",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "web": "expo start --web",
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@expo-google-fonts/montserrat": "^0.1.0",
+    "@expo-google-fonts/open-sans": "^0.1.0",
+    "@react-native-community/masked-view": "0.1.10",
+    "expo": "^38.0.10",
+    "expo-font": "~8.2.1",
+    "expo-splash-screen": "^0.5.0",
+    "expo-status-bar": "^1.0.0",
+    "expo-updates": "^0.2.8",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-native": "^0.62.2",
+    "react-native-gesture-handler": "~1.6.0",
+    "react-native-reanimated": "~1.9.0",
+    "react-native-safe-area-context": "~3.0.7",
+    "react-native-screens": "~2.9.0",
+    "react-native-unimodules": "^0.10.1",
+    "react-native-web": "^0.13.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@react-navigation/native": "^5.7.3",
+    "@react-navigation/stack": "^5.9.0",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-native": "0.63.19",
+    "babel-preset-expo": "^8.2.3",
+    "jest-expo": "^38.0.0",
+    "typescript": "^3.9.5"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

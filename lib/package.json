@@ -1,0 +1,25 @@
+{
+  "name": "react-native-yollar",
+  "version": "0.0.1",
+  "author": "Diyorbek Sadullaev",
+  "main": "dist/index.js",
+  "description": "Library of simple components for React Native",
+  "license": "MIT",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "yarn build"
+  },
+  "peerDependencies": {
+    "@expo-google-fonts/montserrat": "^0.1.0",
+    "@expo-google-fonts/open-sans": "^0.1.0",
+    "expo": "^38.0.10",
+    "expo-font": "^8.2.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-native": "^0.62.2"
+  }
+}
