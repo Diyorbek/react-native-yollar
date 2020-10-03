@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
     "@expo-google-fonts/montserrat": "^0.1.0",
