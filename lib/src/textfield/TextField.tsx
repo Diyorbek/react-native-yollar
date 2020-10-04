@@ -8,10 +8,7 @@ import {
   View,
 } from "react-native";
 import { useColors } from "../Colors";
-import {
-  fontFamilyStyles,
-  useLoadFonts,
-} from "../typography/typographyFontFamily";
+import { fontFamilyStyles, useLoadFonts } from "../shared/typographyFontFamily";
 import { textFieldStyles } from "./textFieldStyles";
 
 export interface TextFieldProps extends TextInputProps {

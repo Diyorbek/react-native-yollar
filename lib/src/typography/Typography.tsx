@@ -11,8 +11,11 @@ import {
   FontFamilyVariant,
   FontWeightVariant,
   useLoadFonts,
-} from "./typographyFontFamily";
-import { TypographyColor, useTypographyColors } from "./typographyColors";
+} from "../shared/typographyFontFamily";
+import {
+  TypographyColor,
+  useTypographyColors,
+} from "../shared/typographyColors";
 
 interface UseTypographyStylesProps {
   variant?: TypographyVariant;

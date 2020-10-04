@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { ColorValue, Platform, StyleSheet, ViewStyle } from "react-native";
 import { useColors } from "../Colors";
-import { BorderRaduis, borderRaduisStyles } from "./borderRadiusStyles";
+import { BorderRaduis, borderRaduisStyles } from "../shared/borderRadiusStyles";
 
 interface ElevationStyle {
   inner: ViewStyle;
