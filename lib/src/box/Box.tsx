@@ -22,6 +22,13 @@ export function Box({
   borderStartWidth,
   borderTopWidth,
   borderWidth,
+  borderColor,
+  borderEndColor,
+  borderLeftColor,
+  borderRightColor,
+  borderStartColor,
+  borderTopColor,
+  borderStyle,
 
   // Outer spacing
   margin,
@@ -83,6 +90,13 @@ export function Box({
     borderStartWidth,
     borderTopWidth,
     borderWidth,
+    borderColor,
+    borderEndColor,
+    borderLeftColor,
+    borderRightColor,
+    borderStartColor,
+    borderTopColor,
+    borderStyle,
   };
 
   const innerSpacing: InnerSpacingStyles = {

@@ -24,12 +24,14 @@ export interface ButtonProps
 
 export function Button({
   children,
+  startIcon,
+  endIcon,
   color = "default",
   variant = "outlined",
   ...props
 }: ButtonProps) {
   const Colors = useColors();
-  const textStyles = useTypographyStyles({
+  const typographyStyles = useTypographyStyles({
     fontFamily: "montserrat",
     fontWeight: "semiBold",
     variant: "body-17",
@@ -56,7 +58,7 @@ export function Button({
       borderColor,
       textColor,
     };
-  }, [Colors]);
+  }, [color, Colors, variant]);
 
   const { containerStyles, labelStyles } = React.useMemo(() => {
     return {
@@ -66,15 +68,18 @@ export function Button({
         { backgroundColor, borderColor } as ViewStyle,
       ]),
       labelStyles: StyleSheet.flatten([
-        textStyles,
+        typographyStyles,
+        buttonStyles.label,
         { color: textColor } as TextStyle,
       ]),
     };
-  }, [backgroundColor, borderColor, textColor, textStyles]);
+  }, [backgroundColor, borderColor, textColor, typographyStyles]);
 
   return (
     <TouchableOpacity {...props} style={containerStyles}>
+      {startIcon}
       <Text style={labelStyles}>{children}</Text>
+      {endIcon}
     </TouchableOpacity>
   );
 }

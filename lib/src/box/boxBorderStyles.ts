@@ -1,7 +1,7 @@
-import { FlexStyle } from "react-native";
+import { ViewStyle } from "react-native";
 
 export type BoxBorderStyles = Pick<
-  FlexStyle,
+  ViewStyle,
   | "borderBottomWidth"
   | "borderEndWidth"
   | "borderLeftWidth"
@@ -9,4 +9,11 @@ export type BoxBorderStyles = Pick<
   | "borderStartWidth"
   | "borderTopWidth"
   | "borderWidth"
+  | "borderColor"
+  | "borderEndColor"
+  | "borderLeftColor"
+  | "borderRightColor"
+  | "borderStartColor"
+  | "borderTopColor"
+  | "borderStyle"
 >;
