@@ -7,6 +7,7 @@
     "lib"
   ],
   "scripts": {
+    "build": "cd lib && yarn build",
     "release": "cd lib && yarn publish",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
