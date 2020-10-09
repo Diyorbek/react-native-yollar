@@ -1,6 +1,6 @@
 {
   "name": "react-native-yollar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Diyorbek Sadullaev",
   "main": "dist/index.js",
   "description": "Library of simple components for React Native",
