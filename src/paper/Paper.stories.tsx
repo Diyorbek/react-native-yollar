@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView } from "react-native-gesture-handler";
-import { Presentation } from "../../../storybook/StoryBookUtility";
+import { Presentation } from "../../storybook/StoryBookUtility";
 import { Box } from "../box/Box";
 import { Typography } from "../typography/Typography";
 

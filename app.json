@@ -2,11 +2,10 @@
   "name": "react-native-yollar",
   "displayName": "react-native-yollar",
   "expo": {
+    "entryPoint": "index.js",
     "name": "react-native-yollar",
     "slug": "react-native-yollar",
     "version": "1.0.0",
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    "assetBundlePatterns": ["**/*"]
   }
 }

@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { ReactNode, useEffect } from "react";
 import { View } from "react-native";
-import { Typography, TypographyProps } from "../lib/src/typography/Typography";
+import { Typography, TypographyProps } from "../src/typography/Typography";
 import { StoryComponentName } from "./navigation";
 
 export const StoryContainer = ({ children }: any) => (

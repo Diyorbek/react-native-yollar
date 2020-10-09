@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box } from "../box/Box";
 import { TextField } from "./TextField";
-import { Caption, Presentation } from "../../../storybook/StoryBookUtility";
+import { Caption, Presentation } from "../../storybook/StoryBookUtility";
 import { Typography } from "../typography/Typography";
 import { Paper } from "../paper/Paper";
 import { ScrollView } from "react-native-gesture-handler";

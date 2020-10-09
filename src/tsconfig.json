@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "outDir": "../dist",
+    "declaration": true,
+    "noEmit": false
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["./**/*.stories.ts", "./**/*.test.ts"]
+}

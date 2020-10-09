@@ -2,7 +2,7 @@ import React from "react";
 import { ScrollView } from "react-native";
 import { Box } from "../box/Box";
 import { Button } from "./Button";
-import { Caption, Presentation } from "../../../storybook/StoryBookUtility";
+import { Caption, Presentation } from "../../storybook/StoryBookUtility";
 
 export default function ButtonStories() {
   return (

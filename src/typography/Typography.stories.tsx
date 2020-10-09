@@ -4,7 +4,7 @@ import {
   Caption,
   Presentation,
   StoryContainer,
-} from "../../../storybook/StoryBookUtility";
+} from "../../storybook/StoryBookUtility";
 import { Typography, TypographyProps } from "./Typography";
 
 export default function TypographyStories() {

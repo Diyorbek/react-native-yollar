@@ -1,11 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { StoriesHome } from "./StoriesHome";
-import ButtonStories from "../lib/src/button/Button.stories";
+import ButtonStories from "../src/button/Button.stories";
 import { Stack } from "./navigation";
-import PaperStories from "../lib/src/paper/Paper.stories";
-import TypographyStories from "../lib/src/typography/Typography.stories";
-import TextFieldStories from "../lib/src/textfield/TextField.story";
+import PaperStories from "../src/paper/Paper.stories";
+import TypographyStories from "../src/typography/Typography.stories";
+import TextFieldStories from "../src/textfield/TextField.story";
 
 export function StoriesContainer() {
   return (
