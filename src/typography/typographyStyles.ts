@@ -1,4 +1,4 @@
-import React from "react";
+import { useMemo } from "react";
 import { StyleSheet, TextStyle } from "react-native";
 import {
   TypographyColor,
@@ -128,14 +128,14 @@ export function useTypographyStyles({
 }: UseTypographyStylesProps): TextStyle {
   const isFontsLoaded = useLoadFonts();
   const colors = useTypographyColors();
-  const defaultFontWeight: FontWeightVariant = React.useMemo(
+  const defaultFontWeight: FontWeightVariant = useMemo(
     () =>
       (["h1", "h2", "h3", "title"] as TypographyVariant[]).includes(variant)
         ? "bold"
         : "regular",
     [variant]
   );
-  const fontStyles = React.useMemo(() => {
+  const fontStyles = useMemo(() => {
     if (isFontsLoaded) {
       return fontFamilyStyles[fontFamily][fontWeight || defaultFontWeight];
     }
@@ -143,7 +143,7 @@ export function useTypographyStyles({
     return {};
   }, [defaultFontWeight, fontFamily, fontWeight, isFontsLoaded]);
 
-  return React.useMemo(() => {
+  return useMemo(() => {
     const styles = StyleSheet.flatten([
       typographyStyles[variant],
       colors[color],
