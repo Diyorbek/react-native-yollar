@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { useColors } from "../Colors";
 import { borderRaduisStyles } from "../shared/borderRadiusStyles";
-import { useTypographyStyles } from "../typography/Typography";
+import { useTypographyStyles } from "../typography/typographyStyles";
 import { buttonStyles } from "./buttonStyles";
 
 export type ButtonColor = "default" | "primary";

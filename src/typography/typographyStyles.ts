@@ -1,4 +1,15 @@
+import React from "react";
 import { StyleSheet, TextStyle } from "react-native";
+import {
+  TypographyColor,
+  useTypographyColors,
+} from "../shared/typographyColors";
+import {
+  FontWeightVariant,
+  FontFamilyVariant,
+  useLoadFonts,
+  fontFamilyStyles,
+} from "../shared/typographyFontFamily";
 
 export type TypographyVariant =
   | "h1"
@@ -80,3 +91,67 @@ export const typographyTransformStyles = StyleSheet.create<TypographyTransform>(
     },
   }
 );
+
+export type TypographyAlignVariant =
+  | "auto"
+  | "left"
+  | "right"
+  | "center"
+  | "justify";
+
+type TypographyAlign = Record<TypographyAlignVariant, TextStyle>;
+
+export const typographyAlignStyles = StyleSheet.create<TypographyAlign>({
+  auto: { textAlign: "auto" },
+  center: { textAlign: "center" },
+  justify: { textAlign: "justify" },
+  left: { textAlign: "left" },
+  right: { textAlign: "right" },
+});
+
+export interface UseTypographyStylesProps {
+  align?: TypographyAlignVariant;
+  variant?: TypographyVariant;
+  color?: TypographyColor;
+  fontWeight?: FontWeightVariant;
+  fontFamily?: FontFamilyVariant;
+  transform?: TypographyTransformVariant;
+}
+
+export function useTypographyStyles({
+  variant = "body-15",
+  color = "textPrimary",
+  fontFamily = "montserrat",
+  align,
+  fontWeight,
+  transform,
+}: UseTypographyStylesProps): TextStyle {
+  const isFontsLoaded = useLoadFonts();
+  const colors = useTypographyColors();
+  const defaultFontWeight: FontWeightVariant = React.useMemo(
+    () =>
+      (["h1", "h2", "h3", "title"] as TypographyVariant[]).includes(variant)
+        ? "bold"
+        : "regular",
+    [variant]
+  );
+  const fontStyles = React.useMemo(() => {
+    if (isFontsLoaded) {
+      return fontFamilyStyles[fontFamily][fontWeight || defaultFontWeight];
+    }
+
+    return {};
+  }, [defaultFontWeight, fontFamily, fontWeight, isFontsLoaded]);
+
+  return React.useMemo(() => {
+    const styles = StyleSheet.flatten([
+      typographyStyles[variant],
+      colors[color],
+      fontStyles,
+      transform && typographyTransformStyles[transform],
+      align && typographyAlignStyles[align],
+    ]);
+
+    return styles;
+  }, [variant, fontStyles, color, transform]);
+}

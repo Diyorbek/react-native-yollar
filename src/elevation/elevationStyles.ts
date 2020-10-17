@@ -107,7 +107,7 @@ export function useElevationStyles({
       inner: StyleSheet.flatten([
         inner,
         borderRaduisStyle,
-        Platform.OS === "ios" ? backgroundColorStyle : undefined,
+        backgroundColorStyle,
       ]),
       outer: StyleSheet.flatten([
         outer,
