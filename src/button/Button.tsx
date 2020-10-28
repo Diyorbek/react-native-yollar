@@ -78,7 +78,11 @@ export function Button({
   return (
     <TouchableOpacity {...props} style={containerStyles}>
       {startIcon}
-      <Text style={labelStyles}>{children}</Text>
+      {typeof children === "string" ? (
+        <Text style={labelStyles}>{children}</Text>
+      ) : (
+        children
+      )}
       {endIcon}
     </TouchableOpacity>
   );
