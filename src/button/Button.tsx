@@ -12,7 +12,7 @@ import { borderRaduisStyles } from "../shared/borderRadiusStyles";
 import { useTypographyStyles } from "../typography/typographyStyles";
 import { buttonStyles } from "./buttonStyles";
 
-export type ButtonColor = "default" | "primary";
+export type ButtonColor = "default" | "primary" | "danger";
 
 export interface ButtonProps
   extends React.PropsWithChildren<Omit<TouchableOpacityProps, "style">> {
@@ -20,6 +20,7 @@ export interface ButtonProps
   endIcon?: React.ReactNode;
   startIcon?: React.ReactNode;
   variant?: "contained" | "outlined";
+  transparent?: boolean;
 }
 
 export function Button({
@@ -28,6 +29,7 @@ export function Button({
   endIcon,
   color = "default",
   variant = "outlined",
+  transparent,
   ...props
 }: ButtonProps) {
   const Colors = useColors();
@@ -41,13 +43,19 @@ export function Button({
       variant === "contained"
         ? color === "default"
           ? Colors.dark[500]
+          : color === "danger"
+          ? Colors.red[400]
           : Colors.blue[300]
+        : transparent
+        ? undefined
         : Colors.white[100];
 
     const textColor =
       variant === "outlined"
         ? color === "default"
           ? Colors.dark[500]
+          : color === "danger"
+          ? Colors.red[400]
           : Colors.blue[300]
         : Colors.white[100];
 

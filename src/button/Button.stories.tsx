@@ -31,6 +31,20 @@ export default function ButtonStories() {
               Hello
             </Button>
           </Presentation>
+          <Presentation title='variant="outlined" color="danger"'>
+            <Button onPress={() => {}} color="danger" variant="outlined">
+              Hello
+            </Button>
+          </Presentation>
+          <Presentation title='variant="contained" color="danger"'>
+            <Button
+              onPress={() => alert("'sup?")}
+              color="danger"
+              variant="contained"
+            >
+              Hello
+            </Button>
+          </Presentation>
           <Presentation
             title={
               <>
